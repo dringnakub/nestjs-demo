@@ -15,6 +15,7 @@ export class AuthenticationMiddleware implements NestMiddleware {
       audience: 'http://localhost:3000',
       issuer: 'https://dev-73v290uc.auth0.com/',
       algorithm: 'RS256',
+      roles: ['admin']
     })(req, res, err => {
       if (err) {
         const status = err.status || 500;

@@ -1,4 +1,5 @@
-export class Items {
-  readonly name: string;
-  readonly price: number;
+export class IItems {
+  id: string;
+  name: string;
+  price: number;
 }
