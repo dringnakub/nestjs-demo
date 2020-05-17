@@ -1,13 +1,16 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Todo {
+export class User {
   @PrimaryGeneratedColumn()
-  id: string;
+  id: number;
 
   @Column({ length: 25 })
-  title: string;
+  fullName: string;
 
-  subtitle: string;
+  @Column('date')
+  birthday: Date;
 
+  @Column()
+  isActive: boolean;
 }
